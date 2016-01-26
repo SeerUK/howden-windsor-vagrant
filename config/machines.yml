@@ -1,0 +1,16 @@
+---
+machines:
+  hw_web:
+    hostname: "hw_web"
+    ipv4: "192.168.74.10"
+    playbook: "provisioning/ansible/web_server.yml"
+    folder_map:
+    - guest: "/opt/www"
+      host: "../../byng_systems@bitbucket.org/howden-windsor/"
+      owner: www-data
+      group: www-data
+
+  hw_db:
+    hostname: "hw_db"
+    ipv4: "192.168.74.20"
+    playbook: "provisioning/ansible/db_server.yml"
